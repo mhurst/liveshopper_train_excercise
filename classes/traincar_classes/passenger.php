@@ -1,7 +1,7 @@
 <?php
 /**
  * Passenger Class
- * A train cars class that implements that interface
+ * A train cars class that extends that class
  * 
  * @package    LiveShopper Train Excercise
  * @author     Matt Hurst <piznac@gmail.com>

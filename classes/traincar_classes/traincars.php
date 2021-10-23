@@ -1,7 +1,8 @@
 <?php
 /**
  * TrainCars Class
- * Blueprints must have properties/methods for all traincar classes
+ * Blueprints must have properties/methods 
+ * for all train car classes
  * 
  * @package    LiveShopper Train Excercise
  * @author     Matt Hurst <piznac@gmail.com>
