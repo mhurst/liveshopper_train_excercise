@@ -10,7 +10,7 @@
 namespace Ls\Classes;
 
 class Train {
-	public array$train = [];
+	private array$train_cars = [];
 	private int$max_train_cars = 30;
 	private int$train_total_weight = 0;
 
@@ -21,8 +21,8 @@ class Train {
 	 * @return void
 	*/
 	public function add_train_car_to_beginning_of_train(object$train_car) {
-		if (count($this->train) < $this->max_train_cars) {
-			array_unshift($this->train, $train_car);
+		if (count($this->train_cars) < $this->max_train_cars) {
+			array_unshift($this->train_cars, $train_car);
 			$this->add_to_train_total_weight($train_car->get_weight());
 
 			return;
@@ -38,8 +38,8 @@ class Train {
 	 * @return void
 	*/
 	public function add_train_car_to_end_of_train(object$train_car) {
-		if (count($this->train) < $this->max_train_cars) {
-			array_push($this->train, $train_car);
+		if (count($this->train_cars) < $this->max_train_cars) {
+			array_push($this->train_cars, $train_car);
 			$this->add_to_train_total_weight($train_car->get_weight());
 
 			return;
@@ -54,8 +54,8 @@ class Train {
 	 * @return void
 	*/
 	public function remove_train_car_from_beginning_of_train() {
-		if (count($this->train) > 0) {
-			$traincar = array_shift($this->train);
+		if (count($this->train_cars) > 0) {
+			$traincar = array_shift($this->train_cars);
 			$this->remove_from_train_total_weight($traincar->get_weight());
 
 			return;
@@ -71,8 +71,8 @@ class Train {
 	 * @return void
 	*/
 	public function remove_train_car_from_end_of_train() {
-		if (count($this->train) > 0) {
-			$traincar = array_pop($this->train);
+		if (count($this->train_cars) > 0) {
+			$traincar = array_pop($this->train_cars);
 			$this->remove_from_train_total_weight($traincar->get_weight());
 
 			return;
@@ -96,7 +96,16 @@ class Train {
 	 * @return int count of class var train
 	*/
 	public function get_train_total_cars() {
-		return count($this->train);
+		return count($this->train_cars);
+	}
+
+	/**
+	 * Get Train Cars
+	 * 
+	 * @return int count of class var train
+	*/
+	public function get_train_cars() {
+		return $this->train_cars;
 	}
 
 	/**
