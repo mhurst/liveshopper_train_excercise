@@ -10,7 +10,7 @@
 
 namespace Ls\Classes\Traincars;
 
-abstract class TrainCars {
+abstract class TrainCar {
     private int $weight;
     private string $type;
 

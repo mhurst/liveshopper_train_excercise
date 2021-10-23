@@ -9,9 +9,9 @@
 
 namespace Ls\Classes\Traincars;
 
-use Ls\Classes\Traincars\traincars as Traincars;
+use Ls\Classes\Traincars\traincar as Traincar;
 
-class Caboose extends TrainCars {
+class Caboose extends TrainCar {
 	private int $weight = 0;
 	private string $type = 'Caboose';
 
