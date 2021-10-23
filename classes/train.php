@@ -10,9 +10,9 @@
 namespace Ls\Classes;
 
 class Train {
-	private array$train_cars = [];
-	private int$max_train_cars = 30;
-	private int$train_total_weight = 0;
+	private array $train_cars = [];
+	private int $max_train_cars = 30;
+	private int $train_total_weight = 0;
 
 	/**
 	 * Add Train Cars To The Beginning Of The Train
@@ -20,7 +20,7 @@ class Train {
 	 * @param object train_car | Instance of a train car class
 	 * @return void
 	*/
-	public function add_train_car_to_beginning_of_train(object$train_car) {
+	public function add_train_car_to_beginning_of_train(object $train_car) {
 		if (count($this->train_cars) < $this->max_train_cars) {
 			array_unshift($this->train_cars, $train_car);
 			$this->add_to_train_total_weight($train_car->get_weight());
@@ -37,7 +37,7 @@ class Train {
 	 * @param object train_car | Instance of a train car class
 	 * @return void
 	*/
-	public function add_train_car_to_end_of_train(object$train_car) {
+	public function add_train_car_to_end_of_train(object $train_car) {
 		if (count($this->train_cars) < $this->max_train_cars) {
 			array_push($this->train_cars, $train_car);
 			$this->add_to_train_total_weight($train_car->get_weight());
@@ -114,7 +114,7 @@ class Train {
 	 * 
 	 * @param ine weight - supplied from train car class
 	*/
-	private function add_to_train_total_weight(int$weight) {
+	private function add_to_train_total_weight(int $weight) {
 		$this->train_total_weight += $weight;
 	}
 
@@ -124,7 +124,7 @@ class Train {
 	 * 
 	 * @param ine weight - supplied from train car class
 	*/
-	private function remove_from_train_total_weight(int$weight) {
+	private function remove_from_train_total_weight(int $weight) {
 		$this->train_total_weight -= $weight;
 	}
 }

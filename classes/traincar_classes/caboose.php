@@ -12,15 +12,15 @@ namespace Ls\Classes\Traincars;
 use Ls\Classes\Traincars\traincars as Traincars;
 
 class Caboose extends TrainCars {
-	private int$weight = 0;
-	private string$type = 'Caboose';
+	private int $weight = 0;
+	private string $type = 'Caboose';
 
 	/**
 	 * Set Weight
 	 * 
 	 * @param int weight 
 	*/
-	public function set_weight(int$weight) {
+	public function set_weight(int $weight) {
 		$this->weight = $weight;
 	}
 
