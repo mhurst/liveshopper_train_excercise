@@ -36,7 +36,7 @@ $train->remove_train_car_from_beginning_of_train();
 $train->remove_train_car_from_end_of_train();
 
 //Lets remove another car from the end of our train.
-// $train->remove_train_car_from_end_of_train();
+$train->remove_train_car_from_end_of_train();
 
 //Lets remove another car from the end of our train.
 //At this point there are no cars in our train 
