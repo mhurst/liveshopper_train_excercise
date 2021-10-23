@@ -9,8 +9,11 @@
 
 namespace Ls\Classes\Traincars;
 
-interface TrainCars {
-	public function set_weight(int$weight);
-	public function get_weight();
-	public function get_type();
+abstract class TrainCars {
+    private int$weight;
+    private string$type;
+
+	abstract function set_weight(int$weight);
+	abstract function get_weight();
+	abstract function get_type();
 }

@@ -11,7 +11,7 @@ namespace Ls\Classes\Traincars;
 
 use Ls\Classes\Traincars\traincars as Traincars;
 
-class Engine implements TrainCars {
+class Engine extends TrainCars {
 	private int$weight = 0;
 	private string$type = 'Engine';
 
