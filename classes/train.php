@@ -102,7 +102,7 @@ class Train {
 	/**
 	 * Get Train Cars
 	 * 
-	 * @return int count of class var train
+	 * @return array of train cars
 	*/
 	public function get_train_cars() {
 		return $this->train_cars;
