@@ -13,6 +13,7 @@ class Train {
 	private array $train_cars = [];
 	private int $max_train_cars = 30;
 	private int $train_total_weight = 0;
+	private int $current_num_of_cars = 0;
 
 	/**
 	 * Add Train Cars To The Beginning Of The Train
@@ -96,7 +97,8 @@ class Train {
 	 * @return int count of class var train
 	*/
 	public function get_train_total_cars() {
-		return count($this->train_cars);
+		$this->current_num_of_cars = count($this->train_cars);
+		return $this->current_num_of_cars;
 	}
 
 	/**

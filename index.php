@@ -30,13 +30,13 @@ $cargo_1->set_weight(5000);
 $train->add_train_car_to_end_of_train($cargo_1);
 
 //Lets remove a car from the beginning of our train.
-$train->remove_train_car_from_beginning_of_train();
+// $train->remove_train_car_from_beginning_of_train();
 
 //Lets remove a car from the end of our train.
-$train->remove_train_car_from_end_of_train();
+// $train->remove_train_car_from_end_of_train();
 
 //Lets remove another car from the end of our train.
-$train->remove_train_car_from_end_of_train();
+// $train->remove_train_car_from_end_of_train();
 
 //Lets remove another car from the end of our train.
 //At this point there are no cars in our train 
@@ -50,9 +50,9 @@ echo 'Total number of cars in our train: ' . $train->get_train_total_cars() . '<
 //How much do all cars in our train weigh?
 echo 'Total weight of the cars in our train: ' . $train->get_train_total_weight() . 'lbs <br>';
 
-echo '<pre>';
-var_dump($train);
-echo '</pre>';
+// echo '<pre>';
+// var_dump($train);
+// echo '</pre>';
 
 //Lets show an example when the train is full
 $train = new Ls\Classes\Train();
@@ -77,3 +77,9 @@ for($i=0;$i<30;$i++) {
 echo '<pre>';
 var_dump($train);
 echo '</pre>';
+
+//How many cars do we currently have in our train?
+echo 'Total number of cars in our train: ' . $train->get_train_total_cars() . '<br>';
+
+//How much do all cars in our train weigh?
+echo 'Total weight of the cars in our train: ' . $train->get_train_total_weight() . 'lbs <br>';
