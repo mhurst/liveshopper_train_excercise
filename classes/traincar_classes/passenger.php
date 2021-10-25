@@ -12,7 +12,6 @@ namespace Ls\Classes\Traincars;
 use Ls\Classes\Traincars\traincar as Traincar;
 
 class Passenger extends TrainCar {
-	private int $weight = 0;
 	private string $type = 'Passenger';
 
 	/**
