@@ -22,8 +22,10 @@ class Train {
 	 * @return void
 	*/
 	public function add_train_car_to_beginning_of_train(object $train_car) {
-		if (count($this->train_cars) < $this->max_train_cars) {
+		if ($this->get_train_total_cars() < $this->max_train_cars) {
 			array_unshift($this->train_cars, $train_car);
+
+			//Handle the car weight
 			$this->add_to_train_total_weight($train_car->get_weight());
 
 			return;
@@ -39,8 +41,10 @@ class Train {
 	 * @return void
 	*/
 	public function add_train_car_to_end_of_train(object $train_car) {
-		if (count($this->train_cars) < $this->max_train_cars) {
+		if ($this->get_train_total_cars() < $this->max_train_cars) {
 			array_push($this->train_cars, $train_car);
+
+			//Handle the car weight
 			$this->add_to_train_total_weight($train_car->get_weight());
 
 			return;
@@ -55,8 +59,10 @@ class Train {
 	 * @return void
 	*/
 	public function remove_train_car_from_beginning_of_train() {
-		if (count($this->train_cars) > 0) {
+		if ($this->get_train_total_cars() > 0) {
 			$traincar = array_shift($this->train_cars);
+
+			//Handle the car weight
 			$this->remove_from_train_total_weight($traincar->get_weight());
 
 			return;
@@ -72,8 +78,10 @@ class Train {
 	 * @return void
 	*/
 	public function remove_train_car_from_end_of_train() {
-		if (count($this->train_cars) > 0) {
+		if ($this->get_train_total_cars() > 0) {
 			$traincar = array_pop($this->train_cars);
+
+			//Handle the car weight
 			$this->remove_from_train_total_weight($traincar->get_weight());
 
 			return;
